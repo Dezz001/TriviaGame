@@ -3,97 +3,89 @@
 $(document).ready(function() {
 	$("fieldset").hide();
 	$("input").hide();
-
+	$("#start").show();
 
 
 });
 	
 
-
-	var timer = 10;
+	// Global Timer Variables
+	var timer = 30;
 	var intervalId;
 
-	// // score variables
-	// var score = 0;
-	// var totalAnswers = 10;
-
+	// Global Answer Variable
 	var answers = [];
+
+	// Temporary Array Holders
 	var currentQuestion = 0;
 	var currentChoice = 0;
 
-
+	// Global Variable
 	var i;
 
 
-
-	// question object array
+	// Question Object Array
 	var trivia = [
 		{
 			question: 'Who played the character Florida Evans in the 1970s sitcom "Good Times"?',
 			choices: ["Diahann Carroll", "Esther Rolle", "Helen Martin", "LaWanda Page"],
-			answer: 1,	
+			// answer: 1,	
 		},
 
 		{
 			question: 'Who is "John Elroy Sanford" also known as?',
 			choices: ["Redd Foxx", "Carroll O'Connor", "Mike Evans", "Haywood Nelson"],
-			answer: 0,	
+			// answer: 0,	
 		},
 
 		{
 			question: 'What fictional character coined the phrase "Hey Hey Hey!"?',
 			choices: ["Jonny Quest", "Scooby Doo", "Captain Cave Man", "Fat Albert"],
-			answer: 3,	
+			// answer: 3,	
 		},
 
 		{
 			question: 'What 1967 movie was the statement made, "They call me Mr. Tibbs!"?',
 			choices: ["In the Heat of the Night", "They Call Me Mr. Tibbs", "The Defiant Ones", "To Sir with Love"],
-			answer: 0,	
+			// answer: 0,	
 		},
 
 		{
 			question: 'What actor played George Jefferson in the sitcom "The Jeffersons"?',
 			choices: ["Ralph Carter", "John Amos", "Jimmy Walker", "Sherman Hemsley"],
-			answer: 3,	
+			// answer: 3,	
 		},
 
 		{
 			question: 'What actor played Lando Calrissian in the movie "The Empire Strikes Back"?',
 			choices: ["Kenny Baker", "Peter Mayhew", "Billy Dee Williams", "Frank Oz"],
-			answer: 2,	
+			// answer: 2,	
 		},
 
 		{
 			question: 'What actor played John Shaft in the 1971 movie "Shaft"?',
 			choices: ["Bill Cosby", "Christopher St. John", "Richard Roundtree", "Moses Gunn"],
-			answer: 2,	
+			// answer: 2,	
 		},
 
 		{
 			question: 'What actor played Arnold Jackson in the 1970s sitcom "Different Strokes"?',
 			choices: ["Gary Coleman", "Todd Bridges", "Emmanuel Lewis", "Alfonso Ribeiro"],
-			answer: 0,	
+			// answer: 0,	
 		},
 
 		{
 			question: 'What actress played Tootie Ramsey in the 1970s sitcom "The Facts of Life"?',
 			choices: ["Viola Davis", "Ruby Dee", "Cherie Johnson", "Kim Fields"],
-			answer: 3,	
+			// answer: 3,	
 		},
 
 		{
 			question: 'What actress played Penny in the 1970s sitcom "Good Times"?',
 			choices: ["Alfre Woodard", "Halle Berry", "Angela Bassett", "Janet Jackson"],
-			answer: 3,	
+			// answer: 3,	
 		},
 	];
-
-// Begins the game on Start Click
-// $("#start").on("click", function() {
-// 	$(this).hide();
-// 	go();
-// });
 
 
 // Starts the Game
@@ -106,6 +98,7 @@ function go() {
 	displayQs();
 	$("fieldset").show();
 	$("input").show();
+	$("#start").hide();
 	// location.reload();
 	// submitAnswers();
 }
@@ -114,6 +107,7 @@ function go() {
 function countDown() {
   intervalId = setInterval(decrement, 1000);
 }
+
 
 // Timer Counter and Display
 function decrement() {
@@ -125,19 +119,11 @@ function decrement() {
   if (timer === 0) {
 
     alert("Times Up!");
-	alert("Total Questions: " + total + "\n" + "\nNumber Correct: " + numCorrect + "\nNumber Incorrect: " + numIncorrect + "\nNumber Unanswered: " + numUnanswered);
-	location.reload();
 
-	// timer = 120;
-	// $("#start").on("click", go);
-
-	// $("#start").on("click", function() {
-	// 	$(this).show();
-		
-	// });
-  
+    submitAnswers();
   }
 }
+
 
 // Scoring variable setup
 function submitAnswers() {
@@ -191,9 +177,6 @@ function submitAnswers() {
 	return false;
 }
 
-
-
-// displayQs();
 
 // Displays Questions on the HTML DOM
 function displayQs() {
