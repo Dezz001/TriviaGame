@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 
 	// Global Timer Variables
-	var timer = 30;
+	var timer = 121;
 	var intervalId;
 
 	// Global Answer Variable
@@ -116,7 +116,7 @@ function decrement() {
 
   $("#show-number").html("<h2>Seconds Left: " + timer + "</h2>");
 
-  if (timer === 0) {
+  if (timer === -1) {
 
     alert("Times Up!");
 
