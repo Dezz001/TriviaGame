@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia Game | Darrin Davis</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- External Asset Stylesheets -->
+<!-- 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- jQuery 1.x -->
+	<script
+	  src="https://code.jquery.com/jquery-1.12.4.js"
+	  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+	  crossorigin="anonymous">
+	</script>
+
+<!-- 	Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+
+
+
+
+</head>
+
+<body>
+	
+	<div id="show-number"></div>
+
+	  <!-- <div id="buttons"> -->
+    <button id="start">Start</button>
+
+
+
+
+	<div class="widget">
+	  <h1>The Trivia Game</h1>
+	 <!--  <div id="results"></div> -->
+	  <h2>1970s Sitcom and Movie Trivia</h2>
+
+	    <form name=triviaForm onsubmit="return submitAnswers()">
+		  <fieldset>
+		    <legend id="displayQ1"></legend>
+		 
+		    <input type="radio" name="q1" value="a" id="displayQ1C1"> Diahann Carroll<br>
+
+		    <input type="radio" name="q1" value="b" id="displayQ1C2"> Esther Rolle<br>
+
+		    <input type="radio" name="q1" value="c" id="displayQ1C3"> Helen Martin<br>
+
+		    <input type="radio" name="q1" value="d" id="displayQ1C4"> LaWanda Page<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ2"></legend>
+		 
+		    <input type="radio" name="q2" value="a" id="displayQ2C1"> Redd Foxx<br>
+
+		    <input type="radio" name="q2" value="b" id="displayQ2C2"> Carroll O'Connor<br>
+
+		    <input type="radio" name="q2" value="c" id="displayQ2C3"> Mike Evans<br>
+
+		    <input type="radio" name="q2" value="d" id="displayQ2C4"> Haywood Nelson<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ3"></legend>
+		 
+		    <input type="radio" name="q3" value="a" id="displayQ3C1"> Jonny Quest<br>
+
+		    <input type="radio" name="q3" value="b" id="displayQ3C2"> Scooby Doo<br>
+
+		    <input type="radio" name="q3" value="c" id="displayQ3C3"> Captain Cave Man<br>
+
+		    <input type="radio" name="q3" value="d" id="displayQ3C4"> Fat Albert<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ4"></legend>
+		 
+		    <input type="radio" name="q4" value="a" id="displayQ4C1"> In the Heat of the Night<br>
+
+		    <input type="radio" name="q4" value="b" id="displayQ4C2"> They Call Me Mr. Tibbs<br>
+
+		    <input type="radio" name="q4" value="c" id="displayQ4C3"> The Defiant Ones<br>
+
+		    <input type="radio" name="q4" value="d" id="displayQ4C4"> To Sir with Love<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ5"></legend>
+		 
+		    <input type="radio" name="q5" value="a" id="displayQ5C1"> Ralph Carter<br>
+
+		    <input type="radio" name="q5" value="b" id="displayQ5C2"> John Amos<br>
+
+		    <input type="radio" name="q5" value="c" id="displayQ5C3"> Jimmy Walker<br>
+
+		    <input type="radio" name="q5" value="d" id="displayQ5C4"> Sherman Hemsley<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ6"></legend>
+		 
+		    <input type="radio" name="q6" value="a" id="displayQ6C1"> Kenny Baker<br>
+
+		    <input type="radio" name="q6" value="b" id="displayQ6C2"> Peter Mayhew<br>
+
+		    <input type="radio" name="q6" value="c" id="displayQ6C3"> Billy Dee Williams<br>
+
+		    <input type="radio" name="q6" value="d" id="displayQ6C4"> Frank Oz<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ7"></legend>
+		 
+		    <input type="radio" name="q7" value="a" id="displayQ7C1"> Bill Cosby<br>
+
+		    <input type="radio" name="q7" value="b" id="displayQ7C2"> Christopher St. John<br>
+
+		    <input type="radio" name="q7" value="c" id="displayQ7C3"> Richard Roundtree<br>
+
+		    <input type="radio" name="q7" value="d" id="displayQ7C4"> Moses Gunn<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ8"></legend>
+		 
+		    <input type="radio" name="q8" value="a" id="displayQ8C1"> Gary Coleman<br>
+
+		    <input type="radio" name="q8" value="b" id="displayQ8C2"> Todd Bridges<br>
+
+		    <input type="radio" name="q8" value="c" id="displayQ8C3"> Emmanuel Lewis<br>
+
+		    <input type="radio" name="q8" value="d" id="displayQ8C4"> Alfonso Ribeiro<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ9"></legend>
+		 
+		    <input type="radio" name="q9" value="a" id="displayQ9C1"> Viola Davis<br>
+
+		    <input type="radio" name="q9" value="b" id="displayQ9C2"> Ruby Dee<br>
+
+		    <input type="radio" name="q9" value="c" id="displayQ9C3"> Cherie Johnson<br>
+
+		    <input type="radio" name="q9" value="d" id="displayQ9C4"> Kim Fields<br>
+		  </fieldset>
+
+	  	  <fieldset>
+		    <legend id="displayQ10"></legend>
+		 
+		    <input type="radio" name="q10" value="a" id="displayQ10C1"> Alfre Woodard<br>
+
+		    <input type="radio" name="q10" value="b" id="displayQ10C2"> Halle Berry<br>
+
+		    <input type="radio" name="q10" value="c" id="displayQ10C3"> Angela Bassett<br>
+
+		    <input type="radio" name="q10" value="d" id="displayQ10C4"> Janet Jackson<br>
+		  </fieldset>
+		  <br><br>
+
+		  <input type="submit" value="Submit Answers">
+		</form>
+
+
+
+	</div>
+
+
+<!-- 	Java Code from game.js -->
+<script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
