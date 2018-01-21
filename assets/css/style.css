@@ -23,13 +23,15 @@ form {
 }
 
 input {
+	text-align: center;
+	margin-left: 46%;
 
 
 }
 
 fieldset {
 	text-align: center;
-	margin-left: 0%;
+
 	
 }
 
